@@ -26,28 +26,30 @@ class supermercado():
                 print('ingrese un string')
             
     
-    '''
+    
     def ingresar_producto_lacteo(self):      
         try:
             cantidad = int(input(' cuantos productos quiere ingresar: '))
             contador = 0
             while contador < cantidad:
                 producto = input('ingrese el nombre del producto: ')
-                posicion = self.buscar_producto_lacteo(producto)
-                if(posicion == -1):
-                    try:    
-                        cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
-                        self.productos_lacteos.append(producto)
-                        self.produtos_lacteos_existencia.append(cantidad_existencia)
-                    except:
-                        print('ingrese un numero por favor')
-                else:
-                    try:
-                        print('el producto ya existe \n agregando cantidad de productos')
-                        cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
-                        self.produtos_lacteos_existencia[posicion] += cantidad_existencia
-                    except:
-                        print('por favor ingrese unnumero')
+                #posicion = self.buscar_producto_lacteo(producto)
+                #if(posicion == -1):
+                try:    
+                    cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
+                    self.productos_lacteos.append(producto)
+                    self.produtos_lacteos_existencia.append(cantidad_existencia)
+                except:
+                    print('ingrese un numero por favor')
+                #else:
+                '''
+                try:
+                    print('el producto ya existe \n agregando cantidad de productos')
+                    cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
+                    self.produtos_lacteos_existencia[posicion] += cantidad_existencia
+                except:
+                    print('por favor ingrese unnumero')
+                '''
                 contador += 1
         except:
             print('porfavor ingrese un numero')
@@ -59,21 +61,23 @@ class supermercado():
             contador = 0
             while contador < cantidad:
                 producto = input('ingrese el nombre del producto: ')
-                posicion = self.buscar_producto_grano(producto)
-                if(posicion == -1):
-                    try:
-                        cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
-                        self.productos_granos.append(producto)
-                        self.productos_granos_existencia.append(cantidad_existencia)
-                    except:
-                        print('por favor ingrese un numero')
-                else:
-                    try:
-                        print('el producto ya existe \n agregando cantidad de productos')
-                        cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
-                        self.productos_granos_existencia[posicion] += cantidad_existencia
-                    except:
-                        print('por favor ingrese un numero')
+                #posicion = self.buscar_producto_grano(producto)
+                #if(posicion == -1):
+                try:
+                    cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
+                    self.productos_granos.append(producto)
+                    self.productos_granos_existencia.append(cantidad_existencia)
+                except:
+                    print('por favor ingrese un numero')
+                #else:
+                '''
+                try:
+                    print('el producto ya existe \n agregando cantidad de productos')
+                    cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
+                    self.productos_granos_existencia[posicion] += cantidad_existencia
+                except:
+                    print('por favor ingrese un numero')
+                '''
                 contador += 1
         except:
             print('por favor ingrese un numero')
@@ -85,26 +89,28 @@ class supermercado():
             contador = 0
             while contador < cantidad:
                 producto = input('ingrese el nombre del producto: ')
-                posicion = self.buscar_producto_aseo(producto)
-                if(posicion == -1):
-                    try:
-                        cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
-                        self.productos_aseo.append(producto)
-                        self.productos_aseo_existencia.append(cantidad_existencia)
-                    except:
-                        print('por favor ingreseun numero')
-                else:
-                    try:
-                        print('el producto ya existe \n agregando cantidad de productos')
-                        cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
-                        self.productos_aseo_existencia[posicion] += cantidad_existencia
-                    except:
-                        print('por favor ingrese un numero')
+                #posicion = self.buscar_producto_aseo(producto)
+                #if(posicion == -1):
+                try:
+                    cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
+                    self.productos_aseo.append(producto)
+                    self.productos_aseo_existencia.append(cantidad_existencia)
+                except:
+                    print('por favor ingreseun numero')
+                #else:
+                '''
+                try:
+                    print('el producto ya existe \n agregando cantidad de productos')
+                    cantidad_existencia = int(input('ingrese la cantidad existente de estos productos'))
+                    self.productos_aseo_existencia[posicion] += cantidad_existencia
+                except:
+                    print('por favor ingrese un numero')
+                '''
                 contador += 1
         except:
             print('por favor ingrese un numero')
           
-            
+    '''
     def buscar_producto_lacteo(self, nombre_producto):
         contador = 0
         posicion = -1
